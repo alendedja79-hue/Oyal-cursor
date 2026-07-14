@@ -1,0 +1,58 @@
+{
+  "expo": {
+    "name": "Oyal",
+    "slug": "oyal",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "oyal",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#EAF6F6"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.oyal.app",
+      "usesAppleSignIn": true,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Oyal needs access to your photos so you can share your trip images and read the location they were taken.",
+        "NSLocationWhenInUseUsageDescription": "Oyal uses location to tag where your trip photos were taken."
+      }
+    },
+    "android": {
+      "package": "com.oyal.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#EAF6F6",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "READ_MEDIA_IMAGES",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ],
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      "expo-web-browser",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Oyal needs access to your photos so you can share your trip images and read the location they were taken."
+        }
+      ]
+    ]
+  }
+}
